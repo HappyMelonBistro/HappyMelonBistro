@@ -1,0 +1,131 @@
+/* Minimal, modern styles for Happy Melon Bistro */
+:root {
+  --bg: #0f1214;
+  --panel: #161a1d;
+  --text: #f4f6f8;
+  --muted: #aab4be;
+  --brand: #61d095; /* melon green */
+  --brand-2: #ffd166; /* sunny accent */
+  --radius: 14px;
+  --shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: 'Outfit', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: linear-gradient(180deg, #0b0e10, #12161a);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+}
+
+.site-header {
+  position: sticky; top: 0; z-index: 9;
+  backdrop-filter: blur(8px);
+  background: rgba(15,18,20,.6);
+  border-bottom: 1px solid rgba(255,255,255,.05);
+}
+.site-header .nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 12px 0;
+}
+.logo { font-weight: 800; letter-spacing: .2px; color: var(--text); text-decoration: none; }
+nav a {
+  color: var(--text); text-decoration: none; margin-left: 18px; font-weight: 500;
+  opacity: .9;
+}
+nav a:hover { opacity: 1; color: var(--brand); }
+
+.hero {
+  display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px;
+  padding: 44px 0 18px;
+}
+.hero-text h1 { font-size: clamp(32px, 5vw, 56px); margin: 0 0 10px; }
+.hero-text p { color: var(--muted); margin: 0 0 20px; }
+.hero-card {
+  border-radius: var(--radius);
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.hero-card img { width: 100%; height: 100%; display: block; object-fit: cover; }
+
+.btn {
+  display: inline-block; background: var(--brand); color: #0d1210;
+  padding: 12px 18px; border-radius: 999px; text-decoration: none; font-weight: 700;
+  box-shadow: 0 6px 16px rgba(97,208,149,.4);
+}
+.btn:hover { transform: translateY(-1px); }
+.btn.ghost {
+  background: transparent; color: var(--text);
+  border: 2px solid rgba(255,255,255,.12);
+}
+.btn.small { padding: 8px 12px; font-weight: 600; }
+
+.section { padding: 56px 0 12px; }
+h2 { font-size: clamp(24px, 3.6vw, 40px); margin: 0 0 8px; }
+.subhead { color: var(--muted); margin: 0 0 18px; }
+
+.grid.cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px;
+}
+.card {
+  background: var(--panel); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow);
+}
+.card img { width: 100%; height: 180px; object-fit: cover; display: block; }
+.card-body { padding: 14px; }
+.card h3 { margin: 0 0 6px; font-size: 18px; }
+.card p { margin: 0 0 10px; color: var(--muted); }
+.price {
+  display: inline-block; background: rgba(97,208,149,.15); color: var(--brand);
+  padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: 14px;
+}
+
+.grid.gallery {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+}
+.grid.gallery img {
+  width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 12px;
+  background: #0d0f11;
+}
+
+.hours ul {
+  list-style: none; padding: 0; margin: 0;
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px 18px;
+}
+.hours li { padding: 8px 0; border-bottom: 1px dashed rgba(255,255,255,.08); }
+
+.map-embed { margin-top: 14px; border-radius: 12px; overflow: hidden; box-shadow: var(--shadow); }
+.map-embed iframe { width: 100%; height: 300px; border: 0; display: block; }
+
+.contact {
+  display: grid; gap: 14px; max-width: 560px;
+}
+.contact label { display: grid; gap: 6px; font-weight: 600; }
+.contact input, .contact textarea {
+  background: #0f1417; color: var(--text); border: 1px solid rgba(255,255,255,.08);
+  padding: 12px 14px; border-radius: 10px; font: inherit;
+}
+
+.form-note { color: var(--muted); font-size: 14px; }
+
+.site-footer {
+  padding: 28px 0 40px; color: var(--muted);
+}
+.site-footer .foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+}
+.site-footer .socials a { color: var(--muted); text-decoration: none; margin-right: 12px; }
+.site-footer .socials a:hover { color: var(--brand-2); }
+
+.note { color: var(--muted); margin-top: 10px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero { grid-template-columns: 1fr; }
+}

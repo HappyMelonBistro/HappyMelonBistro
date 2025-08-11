@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Happy Melon Bistro | Freeport, Trinidad</title>
+  <meta name="description" content="Happy Melon Bistro — fusion cuisine, fresh ingredients, photogenic mocktails. Visit us in Freeport, Trinidad.">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="logo" href="#home">🍈 Happy Melon Bistro</a>
+      <nav>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#hours">Hours</a>
+        <a href="#find-us">Find Us</a>
+        <a href="#contact" class="btn small">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Fresh, fusion & photogenic ✨</h1>
+        <p>All‑day breakfast, elevated street food, and gorgeous mocktails — made with love in Freeport.</p>
+        <div class="cta-row">
+          <a href="#menu" class="btn">See the Menu</a>
+          <a href="https://wa.me/1868XXXXXXX" class="btn ghost" target="_blank" rel="noopener">WhatsApp Order</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <img src="assets/hero.jpg" alt="Happy Melon Bistro food collage" onerror="this.src='assets/placeholder-1200x800.png'">
+      </div>
+    </section>
+
+    <section id="menu" class="container section">
+      <h2>Menu Highlights</h2>
+      <p class="subhead">No pork or beef. Always fresh, always flavorful.</p>
+      <div class="grid cards">
+        <article class="card">
+          <img src="assets/chicken-waffles.jpg" alt="Chicken & Waffles" onerror="this.src='assets/placeholder-800x600.png'">
+          <div class="card-body">
+            <h3>Chicken & Waffles</h3>
+            <p>Crispy local chicken on fluffy waffles, maple drizzle.</p>
+            <span class="price">TT$60</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/seafood-soup.jpg" alt="Turmeric Seafood Soup" onerror="this.src='assets/placeholder-800x600.png'">
+          <div class="card-body">
+            <h3>Turmeric Seafood Soup</h3>
+            <p>Spicy, soothing, loaded with fresh catch and aromatics.</p>
+            <span class="price">TT$65</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/loaded-fries.jpg" alt="Garlic Butter Chicken Fries" onerror="this.src='assets/placeholder-800x600.png'">
+          <div class="card-body">
+            <h3>Garlic Butter Chicken Fries</h3>
+            <p>Golden fries, garlicky butter, herbs, and juicy chicken.</p>
+            <span class="price">TT$48</span>
+          </div>
+        </article>
+        <article class="card">
+          <img src="assets/mocktail.jpg" alt="Signature Mocktails" onerror="this.src='assets/placeholder-800x600.png'">
+          <div class="card-body">
+            <h3>Signature Mocktails</h3>
+            <p>Tropical, photogenic, and alcohol‑free.</p>
+            <span class="price">From TT$25</span>
+          </div>
+        </article>
+      </div>
+      <p class="note">Prices are sample placeholders — edit them in <code>index.html</code>.</p>
+    </section>
+
+    <section id="gallery" class="container section">
+      <h2>Gallery</h2>
+      <div class="grid gallery">
+        <img src="assets/g1.jpg" alt="Dish 1" onerror="this.src='assets/placeholder-600x600.png'">
+        <img src="assets/g2.jpg" alt="Dish 2" onerror="this.src='assets/placeholder-600x600.png'">
+        <img src="assets/g3.jpg" alt="Dish 3" onerror="this.src='assets/placeholder-600x600.png'">
+        <img src="assets/g4.jpg" alt="Dish 4" onerror="this.src='assets/placeholder-600x600.png'">
+      </div>
+    </section>
+
+    <section id="hours" class="container section">
+      <h2>Hours</h2>
+      <div class="hours">
+        <ul>
+          <li><strong>Mon–Thu:</strong> 10:00 – 20:00</li>
+          <li><strong>Fri–Sat:</strong> 10:00 – 22:00</li>
+          <li><strong>Sun:</strong> 11:00 – 18:00</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="find-us" class="container section">
+      <h2>Find Us</h2>
+      <p>Happy Melon Bistro, Freeport, Trinidad & Tobago</p>
+      <div class="map-embed">
+        <!-- Replace with your Google Maps embed if you have it -->
+        <iframe title="Map" src="https://www.openstreetmap.org/export/embed.html?bbox=-61.5,10.2,-61.2,10.5&layer=mapnik" loading="lazy"></iframe>
+      </div>
+      <div class="cta-row">
+        <a class="btn" href="tel:+1868XXXXXXX">Call</a>
+        <a class="btn ghost" target="_blank" rel="noopener" href="https://wa.me/1868XXXXXXX">WhatsApp</a>
+      </div>
+    </section>
+
+    <section id="contact" class="container section">
+      <h2>Contact</h2>
+      <p>Got an event or big order? Send us a message.</p>
+      <form class="contact" name="contact" onsubmit="return handleContact(event)">
+        <label>
+          Name
+          <input required type="text" name="name" placeholder="Your name">
+        </label>
+        <label>
+          Email
+          <input required type="email" name="email" placeholder="you@example.com">
+        </label>
+        <label>
+          Message
+          <textarea required name="message" rows="4" placeholder="What would you like to ask?"></textarea>
+        </label>
+        <button class="btn" type="submit">Send</button>
+        <p class="form-note">This form opens your email app so you can send us a message.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container foot">
+      <p>© <span id="year"></span> Happy Melon Bistro • Built with ❤️ and vanilla HTML/CSS</p>
+      <div class="socials">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="TikTok">TT</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
